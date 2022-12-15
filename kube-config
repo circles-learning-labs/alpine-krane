@@ -40,7 +40,7 @@ users:
 - name: aws-beta
   user:
     exec:
-      apiVersion: client.authentication.k8s.io/v1alpha1
+      apiVersion: client.authentication.k8s.io/v1beta1
       args:
       - eks
       - get-token
@@ -49,7 +49,7 @@ users:
 - name: aws-production
   user:
     exec:
-      apiVersion: client.authentication.k8s.io/v1alpha1
+      apiVersion: client.authentication.k8s.io/v1beta1
       args:
       - eks
       - get-token
