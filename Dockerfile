@@ -1,7 +1,7 @@
 FROM alpine:latest
 
-RUN apk add --no-cache ruby ruby-bigdecimal ruby-etc ruby-json make aws-cli jq git bash
-RUN apk add --no-cache -t build g++ curl ruby-dev
+RUN apk add --no-cache ruby ruby-bigdecimal ruby-etc ruby-json make aws-cli jq git bash curl
+RUN apk add --no-cache -t build g++ ruby-dev
 RUN gem install krane
 # This can be used as the version once aws cli is fixed for kubectl 1.24:
 # $(curl -L -s https://dl.k8s.io/release/stable.txt)
