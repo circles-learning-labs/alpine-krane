@@ -16,5 +16,7 @@ ENV KUBECONFIG /root/.kube/config
 RUN mkdir -p /github/workspace
 VOLUME /github/workspace
 WORKDIR /github/workspace
+ADD entrypoint.sh /usr/bin/entrypoint.sh
+RUN chmod ugo+x /usr/bin/entrypoint.sh
 
-ENTRYPOINT ["make", "deploy"]
+ENTRYPOINT ["/usr/bin/entrypoint.sh"]
