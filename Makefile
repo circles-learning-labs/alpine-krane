@@ -22,4 +22,6 @@ rebuild: clean build ## Rebuild the Docker image
 push: ## Push the Docker image to the ECR repo
 	docker login
 	docker push $(IMAGE_NAME):$(VERSION)
+	docker push $(IMAGE_NAME):$(MIN_VERSION)
+	docker push $(IMAGE_NAME):$(MAJ_VERSION)
 	docker push $(IMAGE_NAME):latest
